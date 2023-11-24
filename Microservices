@@ -1,0 +1,173 @@
+FaaS -----> Function as a Service
+
+it allows customers to execute the code in response to events.
+associated with the micro services applications.
+FaaS is a subset of serverless 
+
+Benefits of FaaS
+ - Focus more on code not infrastructure.
+ - Pay only for the resources you use.
+ - Scale up or down automatically.
+ - Get all the benefits of robust cloud infrastructure.
+ 
+ 
+Serverless
+
+Serverless is a cloud application development and execution model that lets developers build and run 
+application code without provisioning or managing servers or backend infrastructure.
+
+ 
+ 
+Microservices 
+ 
+Microservices is also known as microservice architecture.
+It is an archtectural style that structures an application as a collection of services that are :
+ 
+ - independently deployable 
+ - loosely coupled 
+ - organized around business capabilities
+ - owned by small team
+ 
+Microservices enables rapid, frequent and reliable software delivery.
+ - Rapid, frequent, reliable and sustainable delivery requires the success triangle.
+   combination of three things:
+   
+   - Process - DevOps as defined by the Devops handbook.
+   - Organization - a network of small, loosely coupled, cross functional teams.
+   - Architecture - a loosely coupled, testable and deployable architecture.
+   
+Assemblage is an architecture definition process that you can use to define you microservice architecture.
+
+Benefits of microservices:
+ - Agility
+ - Flexible Scaling
+ - Easy Development
+ - Technological Freedom 
+ - Reusable Code 
+ - Resilience
+ 
+Advantages of Microservices:
+ - self-contained, independent deployable module.
+ - cost scaling is less than monolithic architecture.
+ - single responsiblity principle.
+ - Dynamic scaling 
+ - Faster release cycle
+ 
+Disadvantages of Microservices:
+ - chance of failure during the communication between different services.
+ - difficult to manage lagre numbers of services.
+ - solve the problem such as netwrok latency and load balancing.
+ - complex testing over a distributed environment.
+ 
+Microservices Monitoring: Monitoring is the control system of the microservices.
+ - Principles of Microservices Monitoring
+   - Monitor container and what's inside them.
+   - Alert on service performance.
+   - Monitor services that are elastic and multi-location.
+   - Monitor APIs.
+   - Monitor the organizational structure.
+   
+Microservices Monitoring Tools:
+   - Hystrix Dashboard 
+   - Eureka admin dashboard
+   - Springboot admin board
+   
+Components of Microservices
+ - There are major 8 components of microservices:
+	- Service Discovery
+	- Load Balancer
+	- API Gateway
+	- Service Registry
+	- Circuit Breaker
+	- Service Monitoring
+	- Service Orchestration 
+	- Configuration Server
+	
+	
+	Service Discovery:
+		- The service discovery mechanism helps us know where each instance is located
+		  In this way a service discovery component acts as a registry in which the addresses of all instances are tracked.
+		
+		Common Service Registry/Discovery Frameworks
+			- Netflix OSS
+			- etcd
+			- consul
+Note : With vertical scaling we are adding more compute power to our existing instances and nodes.
+	   In horizontal scaling we get the additional capacity in a system by adding more instances to our environment, sharing the processing and memory workload across multiple devices.\
+	   
+
+	Load Balancer:
+		- Load Balancing refers to efficiently distributing the incoming network traffic across a group of backend servers(multiple instances of service)
+		- Types of Load Balancing 
+			- Load Balancing can be of two types:
+				- Server-side Load Balancing 
+				- Client-side Load Balancing
+				
+				-Server-side Load Balancing:
+					In server side load balancing the instances of the service are deployed on multiple servers 
+					and then a load balancer is put in front of them.
+					Generally a hardware load balancer.
+					
+				-Client-side Load Balancing:
+					The instances of the service are deployed on multiple servers.the load balancer's logic is part of client itself,
+					it holds the list of servers and decides to which server a particular request must be directed based on some algorithm.
+					Also known as software load balancers.
+	
+		-Netflix Ribbon:
+			Netflix Ribbon is an inter-process communication library with a built in client-side load balancer.\
+			
+			- Features of Netflix Ribbon 
+				- Load Balancing 
+				- Fault Tolerence
+				- Configurable Load Balancing Rules 
+				- Supports multiple protocols
+				
+			Using Ribbon  with spring boot microservices can improve service availability, scalability, and fault tolerence
+			as well as provide more control and flexibility over how traffic is distributed across instances.
+			
+	- API Gateway:
+		The API Gateway is a server. It is a single entry point into a system. API Gateway encapsulates the internal system architecture.
+		It provides the API that is tailored to each client.
+		
+		- Responsibilities:
+			- authentication
+			- monitoring
+			- load balancing 
+			- caching
+			- request shaping and management
+			- static response handling
+			- request routing 
+			- protocol translation
+			
+	- Service Registry:
+		Service Registry is a key part of service discovery. The service registry keeps track of the entire individual services in application and stores the IP address/port of those in its database.
+		
+	- Circuit Breaker:
+		Circuit Breaker is a design pattern used to handle faults and failures in a distributed system.
+			
+			Circuit Breaker pattern typically works:
+				- Closed State 
+				- Open State
+				- Half-Open State
+				
+				Closed State - The circuit breaker allows normal operation. If service is healthy, request flow through as usual.
+				
+				Open State - If circuit breaker detects that particular service is failing or experiencing issues, its transition to the openstate in this circuit breaker prevents request from being sent to the failing service.
+				
+				Half-Open State - It allows a limited number of requests to pass through to the service, if requests is successful the circuit may transition back to closed state
+				
+			Resilience4j: lightweight easy to use fault tolerence library.
+				- Features 
+					- Circuit Breaker - fault tolerence
+					- Rate Limiter - block too many requests 
+					- Time Limiter - limit time while calling remote operations
+					- Retry Mechanism - automatic retry for failed operations
+					- Bulk head - limit the number of concurrent requests
+					- Cache - store results of costly remote operations
+	
+	- Service Monitoring:
+		- Spring boot actuator for single application and spring boot admin for multiple appications to look after.
+		
+	- Service Orchestration
+		Service Orchestration is a design approach in distributed computing and microservices archtectures where central coordinating service is responsible for
+		managing and coordinating the interactions and workflows between multiple independent services 
