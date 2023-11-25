@@ -1,3 +1,27 @@
+Working of Database :
+	- Here is the step by step working of database 
+		- User Interaction : A user or an application initiates interaction with the database by submitting a request or query.
+		- Query Parsing : The database management system (DBMS) parses the query to understand its structure and intent.
+		- Query Optimisation : The query optimiser analyses the query and generates an optimised execution plan, considering factors such as indexes, statistics, and available resources.
+		- Authentication and Authorisation : The DBMS checks the user's credentials to verify their identity (authentication) and then ensures they have the necessary permissions to perform 				the requested operation (authorization).
+		- Transaction Management : If the operation involves multiple steps or changes, it is encapsulated within a transaction. Transactions ensure data consistency and integrity.
+		- Concurrency Control : In a multi-user environment, concurrency control mechanisms prevent conflicts between transactions, ensuring that they can run concurrently without 					compromising data consistency.
+		- Query Execution : The DBMS executes the optimized query plan, accessing data from tables, applying conditions, and performing necessary operations.
+		- Data Retrieval and Manipulation : Based on the query execution, the DBMS retrieves the required data or performs the requested data manipulation operation (insert, update, delete).
+		- Index and Caching : Indexes and caching mechanisms are used to enhance performance by quickly locating data in memory or storage.
+		- Logging : The DBMS maintains a transaction log, recording changes made to the data. This log is crucial for recovery in case of system failures.
+		- Commit or Rollback : If the transaction is successful, changes are committed, making them permanent. If an issue occurs, changes are rolled back, and the database remains unchanged.
+		- Data Storage : The data is stored on physical storage devices (e.g., hard drives). The DBMS manages the storage and retrieval of data efficiently.
+		- Backup and Recovery : Regular backups are performed to ensure data integrity and provide a means of recovering data in case of data loss or system failures.
+		- Security Measures : Security features, including encryption, access controls, and auditing, are in place to protect the database from unauthorized access and maintain data 
+			confidentiality and integrity.
+
+Database Schema :
+	- It is a design of the database. Or we can say that it is a skeleton of the database that is used to represent the structure, types of data will be stored in the rows and columns, 				constraints, relationships between the tables.
+
+Database Constraints : 
+	- 
+
 Database Fragmentation: 
 	-Definition : Database Fragmentation refers to the condition where the physical and logical components of a database become disorganised or scattered, leading to inefficiencies in storage utilisation,
 		query performance and overall system maintenance. There are several types of Database Fragmentation 
@@ -22,7 +46,7 @@ Database Migration:
 	-  This may involve moving data between different database management systems (DBMS), upgrading to a new version of the same DBMS, or transferring data from one environment to another.
 		- Primary Goals:
 			- Preserving Data Integrity :  Ensuring that data remains accurate and consistent throughout the migration process.
-			- Minimising Downtime :  Reducing the time during which the database is unavailable or limited in its functionality.
+			- Minimizing Downtime :  Reducing the time during which the database is unavailable or limited in its functionality.
 			- Adopting New Features : Taking advantage of new features and improvements offered by a different DBMS version or system.
 			- Ensuring Compatibility :  Ensuring that the migrated data and schema are compatible with the target environment.
 		
