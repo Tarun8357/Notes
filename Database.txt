@@ -1,8 +1,8 @@
 Database Fragmentation: 
-	-Definition : Database Fragmentation refers to the condition where the physical and logical components of a database become disorganized or scattered, leading to inefficiencies in storage utilization,
-		query performance and overall system maintenence. There are several types of Database Fragmentation 
-			- Disk Fragmentaton 
-			- Internal Fragmmentation 
+	-Definition : Database Fragmentation refers to the condition where the physical and logical components of a database become disorganised or scattered, leading to inefficiencies in storage utilisation,
+		query performance and overall system maintenance. There are several types of Database Fragmentation 
+			- Disk Fragmentaton
+			- Internal Fragmmentation
 			- External Fragmentation 
 			- Index Fragmentation 
 			- Memory Fragmentation
@@ -11,10 +11,10 @@ Database Fragmentation:
 		- Index Maintenance 
 		- Proper Sizing
 		- Monitoring
-		- Memory Optimization 
+		- Memory Optimization
 		- File System Considerations
 		
-	Note:- Addressing and preventing fragmentation is an ongoing process that requires careful monitoring, regular maintenance, and optimization efforts. 
+	Note:- Addressing and preventing fragmentation is an ongoing process that requires careful monitoring, regular maintenance, and optimisation efforts. 
 		By proactively managing fragmentation, database administrators can help ensure the efficient operation of the database system.
 	
 Database Migration:
@@ -22,7 +22,7 @@ Database Migration:
 	-  This may involve moving data between different database management systems (DBMS), upgrading to a new version of the same DBMS, or transferring data from one environment to another.
 		- Primary Goals:
 			- Preserving Data Integrity :  Ensuring that data remains accurate and consistent throughout the migration process.
-			- Minimizing Downtime :  Reducing the time during which the database is unavailable or limited in its functionality.
+			- Minimising Downtime :  Reducing the time during which the database is unavailable or limited in its functionality.
 			- Adopting New Features : Taking advantage of new features and improvements offered by a different DBMS version or system.
 			- Ensuring Compatibility :  Ensuring that the migrated data and schema are compatible with the target environment.
 		
@@ -42,7 +42,7 @@ Database Migration:
 			- Database System Migration :  Moving from one database management system to another. For example, migrating from MySQL to PostgreSQL or from Oracle to Microsoft SQL Server.
 			- Database Version Upgrade :  Upgrading to a newer version of the same database system. For example, upgrading from MySQL 5.7 to MySQL 8.0 or from PostgreSQL 9.6 to PostgreSQL 13.
 			- Cloud Database Migration : Transferring a database from an on-premises environment to a cloud-based database service, or vice versa.
-			- Data Center Relocation : Relocating the entire data center, which involves moving databases and associated systems to a different physical locations.
+			- Data Center Relocation : Relocating the entire data centre, which involves moving databases and associated systems to a different physical locations.
 			
 		- Best Practices During Data Migration : 
 			- When you are doing data migration you have to keep this points in mind - 
@@ -52,7 +52,7 @@ Database Migration:
 				- Rollback Plans: Have a rollback plan in case issues arise during or after migration. This ensures that you can revert to the previous state if necessary.
 				- Communicate Changes: Clearly communicate the migration plan and expected downtime to relevant stakeholders. Inform users and ensure that they are aware of any disruptions.
 				- Monitor Performance: Monitor database performance during and after migration. Identify and address any performance issues that may arise in the new environment. 
-				- Optimize Queries: Review and optimize SQL queries and database-related code to ensure optimal performance in the new environment.
+				- Optimise Queries: Review and optimise SQL queries and database-related code to ensure optimal performance in the new environment.
 				- Iterative Approach: Consider an iterative approach, especially for large databases. Migrate smaller portions of data and validate at each step to minimize risks
 
 		- Migration tools for manage database:
@@ -61,7 +61,7 @@ Database Migration:
 
 Sharding in DBMS:
 	- In DBMS Sharding is a type of database partitioning in which a large database is divided into smaller data and different nodes.
-	- Shards are also managable and faster.
+	- Shards are also manageable and faster.
 	- Primary goal of database sharding is to distribute the load of database operations across multiple servers.
 	- Allow the database to scale horizontally.
 	
@@ -72,7 +72,7 @@ Need for Sharding:
 Features of Sharding:
 	- Sharding makes the database smaller
 	- Sharding makes the database faster
-	- Sharding makes the database much more easily managable
+	- Sharding makes the database much more easily manageable
 	- Sharding reduces the transaction cost of database
 	- Failure of one shard doesn't effect the data processing of other shards
 	
@@ -96,10 +96,10 @@ Benefits of Sharding:
 		Database Designers choose a shard key from an existing column or create one.
 		
 	Shard-nothing Architecture: 
-		- Shard-nothing architecture is an approach to desigining distributed systems, particularly databases, where each node(shard)in the system is independent or self sufficient.
-			- Key Characterstics
+		- Shard-nothing architecture is an approach to designing distributed systems, particularly databases, where each node(shard)in the system is independent or self sufficient.
+			- Key Characteristics
 				-Independence of Nodes
-				-Data Partioning
+				-Data Partitioning
 				-Parallel Processing
 				-Scalability
 				-Fault tolerence
@@ -117,14 +117,14 @@ Benefits of Sharding:
 			-Metadata Management
 			-Shard Failure Handling
 			-Consistency Management
-			-Scalling Operations
+			-Scaling Operations
 			-Connection Pooling 
 			-Monitoring and Reporting
 			-Security 
 			-Failure Detection and Recovery
 			
 			
-	Query Routing - Query Routing is the process of determining the appropriate destination for a database query with in a distrbuted or partitioned system.
+	Query Routing - Query Routing is the process of determining the appropriate destination for a database query with in a distributed or partitioned system.
 	
 	Data Consistency
 	
@@ -143,31 +143,31 @@ Sharding Architectures
 	
 
 	- Key Based Sharding - 
-		-Key Based Sharding - this is also known as hash-based sharding, is a database sharding startegy where data is distributed across multiple shards based on a specific key or set of keys.
-			the purpose of key-based sharding is to evenly distribute the data among the shards, preventing hotspots and optimizinng both read and write operations.
-			Each shard is responsible for specicfic range or hash value of the sharding key
+		-Key Based Sharding - this is also known as hash-based sharding, is a database sharding strateg where data is distributed across multiple shards based on a specific key or set of keys.
+			the purpose of key-based sharding is to evenly distribute the data among the shards, preventing hotspots and optimising both read and write operations.
+			Each shard is responsible for specific range or hash value of the sharding key
 		
 	-Horizontal or Range Based Sharding :
-		-Horizontal Sharding - Horizontal sharding involves dividing a large dtaset into smaller partitions or shards where each shard contains a subset of the data.
+		-Horizontal Sharding - Horizontal sharding involves dividing a large dataset into smaller partitions or shards where each shard contains a subset of the data.
 		
-			-Key Characterstics 
+			-Key Characteristics
 				-Each shard operates as a separate database instance.
 				-Shards are typically defined by rows or ranges of rows in a table.
-				- The goal is to distrbute the data horizontally across the multiple servers and nodes.
-				-Commonly used to improve scalability and parallelize operations.
+				- The goal is to distribute the data horizontally across the multiple servers and nodes.
+				-Commonly used to improve scalability and parallelise operations.
 			-Use Cases 
 				-Distributing data across multiple servers to handle a large number of users.
-				-Improving write and read performance by parallelizing opoerations across shards.
+				-Improving write and read performance by parallelising operations across shards.
 				
 		-Range-based Sharding - Range-baed sharding is a specific type of horizontal sharding where data is divided based on specific ranges of a chosen sharding key.
 		
-			-Key Characterstics
+			-Key Characteristics
 				-Shards are defined based on specific ranges and values in a chosen column( date ranges, numerical ranges)
 				-Commonly used when there's a natural order or hierarchy in the data that can be leveraged for sharding.
 				-Allows for efficient querying of specific ranges of data.
 			-Use Cases
-				-Storing time series data where each shard repersents a specific time period.
-				- Distrbuting data on numerical ranges for load balancing.
+				-Storing time series data where each shard represents a specific time period.
+				- Distributing data on numerical ranges for load balancing.
 		Note: This combination allows for both horizontal scalability across multiple servers and efficient range-based querying within each shard.
 		
 		-Vertical Sharding:
@@ -176,11 +176,11 @@ Sharding Architectures
 			
 		-Directory-Based Sharding:
 				-Directory-based shardingis a sharding strategy where data isdistributed and organized across different directories or file systems based on specific criterion.
-				 this approach is often employed in scenarios where the underlying storage infrastructure provides a hierarchical file system or directory structure that can be levereged for distributingand managing data.
+				 this approach is often employed in scenarios where the underlying storage infrastructure provides a hierarchical file system or directory structure that can be leveraged for distributing and managing data.
 				 
 				
 				-There are some key concepts of the directory based sharding:
-					- Hierarchical Organization: Directory-based sharding relies on the hierarchical organization of data into directories or folders. Each directory may represent a shard or a subset of data based on certain criteria.
+					- Hierarchical Organisation: Directory-based sharding relies on the hierarchical organisation of data into directories or folders. Each directory may represent a shard or a subset of data based on certain criteria.
 					- Sharding Criteria - Sharding decisions are made based on specific criteria that determine how data is distributed across directories. Common criteria include range-based values, categorical attributes, or other characteristics relevant to the application.
 					- Directory Naming Conventions - Naming conventions for directories often reflect the sharding criteria or key. For example, if sharding is based on date ranges, directories may be named with corresponding date values.
 					- Effective Querying - Directory-based sharding can provide efficient querying for operations that involve specific sharding criteria. Retrieving data within a specific directory or a set of directories can be faster than scanning the entire dataset.
@@ -189,30 +189,30 @@ Sharding Architectures
 					
 					
 Multi-Tenant Application Database Design :
-	- Definition : Mulltitenancy in DBMS refers to the capability of a database to efficiently and securely serve multiple tenants, where each tenant is an independent entity 	with its own set of data and schema. 
-		In a multitenant DBMS, tenant maybe individual users, organizations, or applications that share the smae underlying database infrastructure while remaining isolated from each other. 
+	- Definition : Multitenancy in DBMS refers to the capability of a database to efficiently and securely serve multiple tenants, where each tenant is an independent entity 	with its own set of data and schema. 
+		In a multi-tenant DBMS, tenant maybe individual users, organisations, or applications that share the same underlying database infrastructure while remaining isolated from each other. 
 		The goal is to provide a cost effective and scalable solution for managing data for multiple entities.
 		
-	- Key Characterstics of Multitenancy:
-		- Isolation : TenantsC:\Projects\aws-energy2\postgres_init.py are logically isolated from each other, meaning that the data of one tenant is not directly accessible or visible to another. 
-			This isolation is crucial for maintaining datC:\Projects\aws-energy2\postgres_init.pya privacy and security.
+	- Key Characteristics of Multi-tenancy:
+		- Isolation : Tenants are logically isolated from each other, meaning that the data of one tenant is not directly accessible or visible to another. 
+			This isolation is crucial for maintaining data privacy and security.
 		- Shared Infrastructure : Multiple tenants share the same physical or virtual database infrastructure. 
-			This shared resource model helps optimize resource utilization and reduces costs compared to maintaining separate databases for each tenant
+			This shared resource model helps optimise resource utilisation and reduces costs compared to maintaining separate databases for each tenant
 		- Schema Separation : Each tenant typically has its own schema within the shared database. 
 			This separation can be achieved by using different tables, views, or schemas for each tenant to ensure data integrity and prevent cross-tenant data access.
-		- Security Measures : Robust security measures are implemented to ensure that tenants are authenticated, authorized, and that their data remains confidential. 
-			Access controls are enforced to prevent unauthorized access to tenant data.
-		- Scalability : Multitenancy is designed to scale efficiently as the number of tenants grows. 
+		- Security Measures : Robust security measures are implemented to ensure that tenants are authenticated, authorised, and that their data remains confidential. 
+			Access controls are enforced to prevent unauthorised access to tenant data.
+		- Scalability : Multi-tenancy is designed to scale efficiently as the number of tenants grows. 
 			This scalability can be achieved through horizontal scaling, sharding, or other strategies to distribute the load across multiple nodes.
 			
-	- Models of Multitenancy in DBMS : 
+	- Models of Multi-tenancy in DBMS : 
 		- Shared Database, Shared Schema : Tenants share the same database and schema, and their data is distinguished by a unique identifier within shared tables.
 		- Shared Database, Separate Schema : Tenants share the same database but have separate schemas, either within the same database or in separate databases.
 		- Separate Database : Each tenant has its own dedicated database, providing the highest level of isolation but potentially increasing infrastructure overhead.
 		
 	- Use Cases :
-		- Software as a Service Applications : Many SaaS applications leverage multitenancy to efficiently serve multiple customers with a shared application instance and database.
-		- Enterprise Applications : Large enterprises may use multitenancy to manage data for different departments, business units, or subsidiaries within a centralized database.
-		- Cloud Services : Cloud database services often provide multitenant architecture to optimize resource utilization and provide cost-effective solutions for multiple users.
+		- Software as a Service Applications : Many SaaS applications leverage multi-tenancy to efficiently serve multiple customers with a shared application instance and database.
+		- Enterprise Applications : Large enterprises may use multi-tenancy to manage data for different departments, business units, or subsidiaries within a centralised database.
+		- Cloud Services : Cloud database services often provide multi-tenant architecture to optimise resource utilisation and provide cost-effective solutions for multiple users.
 		
 		
