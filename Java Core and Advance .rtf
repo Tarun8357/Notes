@@ -1,0 +1,137 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh21000\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 																														JAVA\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0\fs26 \cf0 \'a0\
+Java is a programming language and a platform also a high level, robust, object-oriented programming language \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	1. Developed by SUN MICROSYSTEMS\
+	\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 APPLICATIONS OF JAVA \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	1. Desktop Applications such as acrobat reader etc.\
+	2. Web Applications such as Arctic\
+	3. Enterprise Applications such as banking applications.\
+	4. Mobile \
+	5. Embedded System\
+	6. Robotics\
+\
+TYPES OF JAVA APPLICATIONS\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	1. Standalone Application\
+	2. Web Application\
+	3. Enterprise Application\
+	4. Mobile Application\
+	\
+Java Platforms \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	1. Java SE (Java  Standard  Edition)\
+	2. Java EE (Java Standard Edition)\
+	3. Java  ME (Java Micro Edition)\
+	4. Java FX\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Important Features of Java Language\
+	\
+	1. Object Oriented \
+	2. Simple - Java considered as simple due to Clear Syntax, Object-Oriented Approach, Automatic Memory Management, Platform Independence, Standard Library (API), Strong Typing, No Explicit Pointers, No Operator overloading, Robust Exception Handling, Community Documentation.\
+	3. Secured - Java is often considered as a secure programming language due to several features and design choices that help prevent common security vulnerabilities.\
+			1. Byte Code Compilation and Java Virtual Machine \
+			2. Platform Independence \
+			3. Security Manager \
+			4. ClassLoaders (provide isolation between classes, load classes at runtime, helping to prevent unauthorized access to sensitive resources.)\
+			5. Automatic Memory Management \
+			6. Exception Handling\
+			7.Security APIs\
+			8. Standardised Security Protocols \
+		\
+	4. Platform Independent  - Java achieve platform independence through the combination of two key features: the Java Virtual Machine (JVM) and then use of Byte Code \
+	5. Robust \
+	6. Portable \
+	7. Architectural Neutral\
+	8. Dynamic \
+	9. Interpreted\
+	10. High Performance \
+	11. Multithreaded\
+	12. Distributed\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 STEP BY STEP WORKING JAVA VIRTUAL MACHINE \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	STEP 1 : Compilation of Java Source Code \
+			1. Java Source Code : Developers write java source code in the plain text file with .java extension \
+			2. Compilation : The Java Compiler (javac)  is used to compile the source code into byte code . Byte code is the intermediate representation of the program and saved with .class extension.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	\
+	STEP 2 : Class Loading \
+			1. Class loader : Class loader is responsible for loading the classes into the JVM. There are three main steps : loading, linking and initiialization.\
+			A. Loading : The class loader loads and compiled classes into JVM from various sources, such as the local file system network or custom sources.\
+			B. Linking : \
+					Verification : Bytecode undergoes verification to ensure adherence to java language specifications and security constraints.\
+					Preparation :  Memory is allocated for a class variables and initialised to default values.\
+					Resolution : Symbolic references are replaced with direct references to memory locations.\
+			C. Initialisation : Static variables are initialised and static initialisation blocks are executed.\
+\
+	STEP 3 : Bytecode Verification : \
+			1. Before execution, the JVM performs byte code verification to ensure the code\'92s safety and integrity.\
+			2.  This process checks for illegal byte code and potential security vulnerabilities.\
+			3. If verification fails, the JVM refuses to execute the code .\
+\
+	STEP 4 : Executed Engine :\
+			1. The execution engine interprets and executes Java bytecode. Two main approaches are used : \
+\
+					Interpreter : Translates byte code into machine code instructions and executes them one by one.\
+\
+					Just-In-Time(JIT)Compilation : Some JVMs use a JIT compiler to translate byte code  into native machine code at runtime, improving execution speed.\
+\
+	STEP 5 : Runtime Data Areas : \
+			Memory Management : \
+					1. The JVM manages various runtime data areas, including : \
+						A. Method Area : Store class metadata, static variables, method information.\
+						B. Heap : Memory area for objects and dynamic data.\
+						C. Stack : Each thread has its own stack for storing local variables and method call information.\
+						D. Program Counter (PC) : Keeps track of the current instruction being executed.\
+\
+	STEP 6 : Garbage Collections :\
+			1. Garbage Collection : \
+						A. The JVM includes a garbage collector to reclaim memory occupied by objects that are no longer reachable.\
+						B. Automatic memory management prevents memory leaks and improves program stability.\
+\
+	STEP 7 : Native Interface :\
+\
+			1. Java Native Interface (JNI) : \
+						A. JNI allows Java code to interact with native applications and libraries written in languages like C and C++.\
+						B. Enables interoperability between Java and native code.\
+\
+	\
+	STEP  8 : Execution Termination : \
+\
+			1. The program execution ends when the main method finishes or when the System.exit() method called.\
+\
+Note : In summary the JVM provides a platform-independent execution environment for Java programs. It starts with the compilation of source code into byte code, followed by class loading, byte code verification and execution by the execution engine. Memory management, including garbage collection, ensures proper resource utilisation and the Java Native Interface allows interaction with native code if needed.\
+			}
