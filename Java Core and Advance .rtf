@@ -220,4 +220,37 @@ After deploying the web-application on the tomcat the further actions performed 
 				3.1 : Client Request : When a client (web browser or other HTTP client ) sends a request, It is received by Tomcat\'92s connectors.\
 				3.2 : Connector : The connector, configured in the \'91server.xml\'92 file processes the incoming request. The default connector is typically an HTTP connector listening on the port 8080.\
 \
-			4. Catalina Container : 	}
+			4. Catalina Container : \
+				4.1 : Catalina : The catalina container is responsible for managing the servlet container (engine) and handling the life cycle of the web applications. \
+\
+				4.2 : Request Processing : The Catalina container processes the incoming request and determines which web application (context) should handle it based on the context path.\
+\
+			5. Web Application Context : \
+				5.1 : Context : Tomcat creates a separate context for each deployed web application. The context contains information about the web application, including its configuration, class loader and resources. \
+				5.2 : Servlet Mapping : The context uses the servlet mapping defined in the deployment descriptor to route the request to the appropriate servlet resource.\
+\
+			6. Servlet Execution : \
+				6.1 : Servlet Execution :	 If the request corresponds to a servlet, the servlet container executes the servlet\'92s \'91service()\'92 method, which generates the response.\
+				6.2 : Filter Execution (Optional) : If filters are configured in the deployment descriptor, they are executed before and after the servlet allowing for pre-processing and post-processing of requests and responses.\
+\
+			7. Response Generation :\
+				7.1 : Response Generation : The servlet generates an HTTP response, which includes headers and the response body.\
+				7.2 : Content Type and Encoding : The content type and character encoding specified in the servlet\'92s response are used to format the response.\
+\
+			8. Tomcat Connector : \
+				8.1 : Connector : The Tomcat connector sends the generated response back to the client over the network.\
+				8.2 : Client Response : The client receives the response and renders it based on the content received .\
+\
+			9. Session Management : \
+				9.1 : Session Tracking : If the web application uses sessions, Tomcat manages session tracking and maintains session state falls for clients.\
+\
+			10. Logging and monitoring :  \
+				10.1 : Logging : Tomcat logs various events, errors and access information. Log files can be be found in the \'91logs\'92 directory.\
+				10.2 : Monitoring : Administrators can Monitor Tomcat using tools like the Tomcat Manager and review log files for diagnostics.\
+\
+			11. Undeployment : \
+				11.1 : Undeployment : \
+						- To undeploy a web-application, remove its directory or WAR file from the \'91webapps\'92 directory.\
+						- Tomcat automatically undeploys the application and releases its resources.\
+\
+This process continues as tomcat handles subsequent requests and manages the lifecycle of deployed web applications. It\'92s important to note that this is a simplified overview and Tomcat\'92s modular architecture provides flexibility for customisation, extension, and integration with various technologies.}
