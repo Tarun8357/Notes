@@ -226,3 +226,54 @@ After deploying the web-application on the tomcat the further actions performed 
 						- Tomcat automatically undeploys the application and releases its resources.
 
 This process continues as tomcat handles subsequent requests and manages the lifecycle of deployed web applications. It’s important to note that this is a simplified overview and Tomcat’s modular architecture provides flexibility for customisation, extension, and integration with various technologies.
+
+					
+
+							MAVEN 
+
+Apache Maven is an open-source build automation and project managenment tool. It is widely used for managing and building Java projects but can also be used for projects in other programming languages. Maven simplifies the build process, handles dependencies and provides a consistent project structure.
+
+	Key Concepts and Features : 
+
+		1. Project Object Model(POM) : Maven uses a Project Object Model (POM), an XML file that describes the project configuration and dependencies.
+		The POM includes information such as project coordinates, dependencies, build, plugins, and more.
+
+		2. Convention Over Configuration : Maven follows the principle of "convention over configuration " meaning that it uses defaults and conventions to streamline the build process.
+		This reduces the need for extensive configuration.
+
+		3. Dependency Management : Maven manages project dependencies by retrieving and managing libraries from repositories. It simplifies the process of specifying and downloading external libraries
+
+		4. Build Lifecycle: Maven defines a set of build phases and goals that make up the build lifecycle. Common phases include compile, test, package, install, and deploy 
+		Goals are specific tasks that are executed during a phase.
+
+		5. Plugins : Maven is extensible through plugins that provide additional functionality. Plugins can be used to perform tasks 
+		such as code compilation, running tests, creating JAR or WAR files, and more.
+
+		6. Central Repository : Maven Central Repository is a centralized repository that hosts a vast collection of open-source libraries and artifacts.
+		Maven automatically downloads dependencies from this repository.
+
+		7. Integration with IDEs : Maven integrates with the popular Integrated Development Environments (IDEs) like eclipse, IntelliJ Idea and Netbeans, making it easy to import and work with maven projects.
+
+		8. Consistent Project Structure : Maven promotes a standardized project structure, making it easier for developers to understand and work on projects. This consistency simplifies collaboration and Integration.
+
+	Workflow of the Maven :
+		
+		1. Initialisation : When we execute a Maven goal or command, Maven initailizes by reading the project's POM.
+		2. Dependency Resolution : Maven starts by resolving project dependencies declared in the POM file It looks for dependencies in the local Maven repository (~/.m2/repository) and, if not found,, retrieves them from remote repos.
+		3.Plugin Execution : Maven executes plugins defined in the POM file. Plugins are responsible for performing various tasks during the build process, such as compiling code, running tests and packing artifacts.
+		4. Build Lifecycle : Maven follows a predefined build lifecycle, which includes different phases. Each phase is associated with specific goals that are executed in sequence.
+		5. Compile and Test : During the compile phase Maven compiles the source code located in the 'src/main/java' directory
+		In the test phase, it runs tests located in the 'src/test/java' directory 
+		6. Packing : In the 'package' phase, Maven packages the compiled code and resources into a distributable format (e.g JAR WAR).
+		7. Install : In the 'install' phase, Maven install the project artifacts (e.g, JAR file) into the local Maven repo (~/.m2/repository). This makes them available for the other projects on the same machine.
+		8. Dependency Management : Maven manages dependencies by creating a local cache of downloaded JAR files in the local repository. This ensures that dependencies are resolved efficiently without redundant downloads.
+		9. Effective POM : Maven generates an effective POM that includes the combined configuration from the project's POM and any parent POMs. This represent the final configuration used during the build.
+		10. Plugin Goals Execution : For each phase, Maven executes the associated goals of the configured plugins. These goals perform specific tasks such as code compilation, running tests and creating the artifacts.
+		11. Lifecycle Binding : Plugins bind to specific phases in the build lifecycle. For example the maven-compiler-plugin binds to the compile phase, and the maven-surefire-plugin binds to the test phase.
+		12. Logging and Output : Maven provides detailed output during the build process including information about the executed goals, dependencies resolved and errors encountered. This information is displayed on console.
+		13. Build Success or Failure : The build concludes with a success or failure status. If all phases complete successfully Maven reports a successful build; otherwise, it provides information about any errors encountered.
+
+
+	Note : Understanding this behind-the-scenes process helps developers leverage the power and automation provided by Maven for managing projects, dependencies, and the build lifecycle. 
+It also allows for customization through the configuration of plugins and goals in the POM file.
+
