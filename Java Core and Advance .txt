@@ -178,6 +178,7 @@ Apache Tomcat is referred to as Tomcat, is an open-source web server and servlet
 
 			 
 After deploying the web-application on the tomcat the further actions performed by the tomcat :
+
 			1. Web-Application Deployment : 
 				1.1 : Placement in ‘web apps’ Directory : The web application, in the form of a WAR (web application archive ) file or an unpacked directory, is placed in the ‘webapps’ directory of the Tomcat installation.
 				1.2 : Auto- Deployment (Optional ) : Tomcat monitors the web apps directory for changes. If automatic deployment is enabled, Tomcat automatically deploys the application upon detecting changes.
@@ -229,7 +230,8 @@ This process continues as tomcat handles subsequent requests and manages the lif
 
 					
 
-							MAVEN 
+															MAVEN 
+
 
 Apache Maven is an open-source build automation and project managenment tool. It is widely used for managing and building Java projects but can also be used for projects in other programming languages. Maven simplifies the build process, handles dependencies and provides a consistent project structure.
 
@@ -277,3 +279,27 @@ Apache Maven is an open-source build automation and project managenment tool. It
 	Note : Understanding this behind-the-scenes process helps developers leverage the power and automation provided by Maven for managing projects, dependencies, and the build lifecycle. 
 It also allows for customization through the configuration of plugins and goals in the POM file.
 
+
+
+														SPRING FRAMEWORK 
+
+
+Spring is a comprehensive framework for Java development. It provides a wide range of features, including dependency injection, aspect-oriented programming, data access, transaction management and more.
+
+A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
+
+	Features of the Spring :
+
+		- Core Technologies : dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP.
+
+		- Testing : mock objects, TestContext framework, Spring MVC Test, WebTestClient.
+		- Data Access : transaction. DAO support, JDBC, ORM, Marshalling XML.
+		- Spring MVC and Spring WebFlux web frameworks.
+		- Integration : remoting, JMS, JCA, JMX, emails tasks, scheduling, cache, and observability.
+		- Languages : Kotlin, Groovy, Dynamic languages.
+
+
+    Inversion of Control : Inversion of Control is a design principle in software development that refers to the reversal of the flow of control in a system, the flow of control is determined by the program's code and the program behaviour is often tightly coupled with the instantiation and management dependencies. In contrast, IoC delegates the responsibility of managing dependencies to an external container or framework.
+
+	Key Concepts of Inversion of Control :
+			
