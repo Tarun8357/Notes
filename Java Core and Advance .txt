@@ -384,3 +384,4 @@ Configuration Metadata: Configuration Metadata is traditionally supplied in a si
 
 		Java-based Configuration : define beans external to your application classes by  using Java rather than XML files. To use these features see the @Configuration, @Bean, @Import and @DependsOn annotations.
 
+BEANS : Bean definitions corresponds to the actual objects that make up your application. Typically you define service layer objects, persistence layer objects such as repositories or data access objects(DAOs), presentation objects such as Web Controllers, infrastructure objects such as JPA, JMS queues and so forth.
