@@ -302,4 +302,85 @@ A key element of Spring is infrastructural support at the application level: Spr
     Inversion of Control : Inversion of Control is a design principle in software development that refers to the reversal of the flow of control in a system, the flow of control is determined by the program's code and the program behaviour is often tightly coupled with the instantiation and management dependencies. In contrast, IoC delegates the responsibility of managing dependencies to an external container or framework.
 
 	Key Concepts of Inversion of Control :
-			
+			1. Dependency Injection (DI) : 
+				- Dependency Injection is a specific form of IoC. In DI, the control flow is inverted, and the framework or container is responsible for injecting dependencies into the components that require them.
+
+				- Instead of components creating or looking up their dependencies are injected from the outside.
+
+			2. Decoupling : IoC aims to decouple components and promote a more modular and flexible design.
+Components become more independent as they no longer need to manage the creation and lifecycle of their dependencies.
+
+			3. Container or Framework : In IoC, a container or framework takes on the responsibility of managing the lifecycle and dependencies of components. Example of such containers include the Spring Framework's IoC container or Java EE's application server.
+
+			4. Inversion of Responsibilities : With IoC, the responsibility for managing dependencies is inverted from the application code to the framework or container. This inversion reduces the coupling between components and makes the system more maintainable and testable.,
+
+			5. Benefits : 
+				- Flexibility : IoC makes it easier to change the implementation of a component without affecting its clients.
+				- Testability : Components can be easily tested in isolation by substituting real dependencies with mock objects.
+				- Reusability : Components can be reused different contexts without modification.
+
+
+
+Basic Concepts of the Dependency Injection : 
+
+		- Dependencies : Dependencies are external objects or services that a class relies on to perform its functions.
+
+		- Inversion of Control : Dependency Injection is a form of IoC where the control over the creation and management of dependencies is inverted from the dependent class to an external entity.
+
+	Types of Dependency Injection : 
+		- Constructor Injection : Dependencies are injected through the class constructor. This is the common and recommended form of DI 
+
+			Example : 
+
+					public class Car {
+   					      private Engine engine;
+
+    					      // Constructor-based dependency injection
+    					      public Car(Engine engine) {
+        					    this.engine = engine;
+    					      }
+					}
+
+
+		- Setter Injection : Dependencies are injected through setter methods.
+		- Method Injection : Dependencies are injected through methods.
+
+	Advantages of the Dependency Injection : 
+
+		- Decoupling : Dependency Injection reduces the coupling between components making them more modular and independent.
+
+		- Testability : Components can be easily tested in isolation by providing mock test implementations of their dependencies without affecting the components.
+
+		- Flexibility : The external entity (container or framework) can easily change the implementation of  dependencies without affecting the components.
+
+	Dependency Injection Containers / Frameworks : 
+			Spring Framework : A comprehensive framework for Java development that includes a powerful Inversion of Control (IoC) container providing Dependency Injection.
+
+			Google Guice : A lightweight DI framework for Java.
+
+	Common Annotations : 
+
+		- @Autowired (Spring) : An annotation used in Spring to automatically inject dependencies into beans.
+
+		- @Inject : An annotation used in Java EE and Google Guice for dependency injection.
+
+	Scopes : 
+
+		Singleton : A single instance of the dependency is shared across multiple components.
+		Prototype : A new instance of the dependency is created for each component that requires it.
+
+	
+	Configuration : 
+
+		XML Configuration (Spring) : Dependencies and their injection points can be configured in XML files.
+
+		Java Config (Spring) : Dependencies can be configured using  Java-based configuration classes.
+
+
+Configuration Metadata: Configuration Metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC Container.
+		
+
+		Annotation-based Configuration : define beans using annotation-based configuration metadata. 
+
+		Java-based Configuration : define beans external to your application classes by  using Java rather than XML files. To use these features see the @Configuration, @Bean, @Import and @DependsOn annotations.
+
